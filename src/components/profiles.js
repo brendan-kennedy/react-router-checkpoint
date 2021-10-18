@@ -42,11 +42,11 @@ const Profiles = () => {
         <div> 
             <h2> Your Friends! </h2>
             <h3>Here are Your Friends:</h3>
-            <FriendNavBar props =  {profileData.connectedFriends}/> 
+            <FriendNavBar friends =  {profileData.connectedFriends}/> 
                 <Switch>
-                    <Route  path="/profiles/1" component={<Friend1 props = {profileData[0]}/>} />
-                    <Route  path="/profiles/2" component={<Friend2 props= {profileData[1]}/>} />
-                    <Route  path="/profiles/3" component={<Friend3 props= {profileData[2]}/>} />
+                    <Route  path="/profiles/:id" component={Friend1} />
+                    <Route  path="/profiles/:id" component={Friend2} />
+                    <Route  path="/profiles/:id" component={Friend3} />
                 </Switch> 
 
         </div>  

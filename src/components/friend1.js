@@ -1,10 +1,12 @@
 import React from 'react'
-const Friend1 = (props) => {
+import { useParams } from 'react-router'
 
+const Friend1 = ({props}) => {
+    const { id} = useParams()
     return ( 
         <div> 
-            <h4>{`${props.firstName} ${props.lastName}`}</h4>
-           <img src = {props.profileImage} alt = 'Profile Picture' />
+            <h4> Friend 1 - {id}</h4>
+            <p> {props.lastName}  </p>
 
         </div>  
     )
