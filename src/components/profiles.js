@@ -44,9 +44,9 @@ const Profiles = () => {
             <h3>Here are Your Friends:</h3>
             <FriendNavBar friends =  {profileData.connectedFriends}/> 
                 <Switch>
-                    <Route  path="/profiles/:id" component={Friend1} />
-                    <Route  path="/profiles/:id" component={Friend2} />
-                    <Route  path="/profiles/:id" component={Friend3} />
+                    <Route  path="/profiles/:id" render= {() => <Friend1 props = {profileData.connectedFriends[0]} /> } />
+                    <Route  path="/profiles/:id" render= {() => <Friend2 props = {profileData.connectedFriends[1]} /> } />
+                    <Route  path="/profiles/:id" render= {() => <Friend3 props = {profileData.connectedFriends[2]} /> } />
                 </Switch> 
 
         </div>  

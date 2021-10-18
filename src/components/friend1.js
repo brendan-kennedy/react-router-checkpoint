@@ -6,7 +6,8 @@ const Friend1 = ({props}) => {
     return ( 
         <div> 
             <h4> Friend 1 - {id}</h4>
-            <p> {props.lastName}  </p>
+            <p> {props.birthday}  </p>
+            <img src= {props.profileImage} alt = {`Profile Picture`} />
 
         </div>  
     )

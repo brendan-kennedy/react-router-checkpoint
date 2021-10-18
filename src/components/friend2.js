@@ -1,13 +1,17 @@
 import React from 'react'
-const Friend2 = ({props}) => {
+import { useParams } from 'react-router'
 
+const Friend1 = ({props}) => {
+    const { id} = useParams()
     return ( 
         <div> 
-            <h4> Friend 2</h4>
+            <h4> Friend 2 - {id}</h4>
+            <p> {props.birthday}  </p>
+            <img src= {props.profileImage} alt = {`Profile Picture`} />
 
         </div>  
     )
 
 }
 
-export default Friend2
+export default Friend1
