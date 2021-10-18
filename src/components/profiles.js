@@ -1,7 +1,7 @@
 import React from 'react'
-import Friend1 from './components/friend1'
-import Friend2 from './components/friend2'
-import Friend3 from './components/friend3'
+import Friend1 from './friend1'
+import Friend2 from './friend2'
+import Friend3 from './friend3'
 import { Route, Switch } from 'react-router-dom' 
 import FriendNavBar from './friendnavbar'
 import { useState } from 'react'
@@ -42,11 +42,11 @@ const Profiles = () => {
         <div> 
             <h2> Your Friends! </h2>
             <h3>Here are Your Friends:</h3>
-            <FriendNavBar/> 
+            <FriendNavBar props =  {profileData.connectedFriends}/> 
                 <Switch>
-                    <Route  path="/profiles/1" component={Friend1} />
-                    <Route  path="/profiles/2" component={Friend2} />
-                    <Route  path="/profiles/3" component={Friend3} />
+                    <Route  path="/profiles/1" component={<Friend1 props = {profileData[0]}/>} />
+                    <Route  path="/profiles/2" component={<Friend2 props= {profileData[1]}/>} />
+                    <Route  path="/profiles/3" component={<Friend3 props= {profileData[2]}/>} />
                 </Switch> 
 
         </div>  
